@@ -6,4 +6,5 @@
 
 ### 2023 12
 - Longest Substring Without Repeating Characters
+- Palindrome Number
 - Reverse Integer
