@@ -14,3 +14,11 @@ jobs:
           pip install -r requirements.txt
           flake8 .
           pytest -s
+
+      - uses: actions/checkout@v3
+      - name: Update README.md
+          git config --global user.email "1phanatasmas@korea.ac.kr"
+          git config --global user.name "1pha"
+          git add README.md
+          git commit -m "<Action> auto update README.md"
+          git push origin main
