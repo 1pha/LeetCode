@@ -20,6 +20,12 @@ jobs:
         run: |
           git config --global user.email "1phanatasmas@korea.ac.kr"
           git config --global user.name "1pha"
-          git add README.md
-          git commit -m "<Action> auto update README.md"
-          git push origin main
+
+          # Check if there are changes0
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            git add README.md
+            git commit -m "<Action> auto update README.md"
+            git push origin main
+          fi
