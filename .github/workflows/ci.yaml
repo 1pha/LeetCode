@@ -15,7 +15,6 @@ jobs:
           flake8 .
           pytest -s
 
-      - uses: actions/checkout@v3
       - name: Update README.md
         run: |
           git config --global user.email "1phanatasmas@korea.ac.kr"
