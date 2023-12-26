@@ -5,6 +5,7 @@
 ## Solved Problems
 
 ### 2023 12
+- Find Palindrome With Fixed Length
 - Longest Substring Without Repeating Characters
 - Palindrome Number
 - Reverse Integer
