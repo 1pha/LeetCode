@@ -21,6 +21,7 @@ jobs:
           git config --global user.email "1phanatasmas@korea.ac.kr"
           git config --global user.name "1pha"
 
+          python assets/upload.py
           # Check if there are changes0
           if git diff --quiet; then
             echo "No changes to commit."
