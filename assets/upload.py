@@ -22,7 +22,7 @@ def fetch_problems(base_dir: Path = PROB_DIR) -> str:
     for p in problems:
         pt, pdt = parse_problem(p)
         probs[f"{pdt.year} {str(pdt.month).zfill(2)}"].append(pt)
-    
+
     txt = "\n"
     for date_key, _probs in probs.items():
         txt = txt + f"### {date_key}\n"
@@ -36,17 +36,16 @@ def get_readme() -> str:
         txt = f.readlines()
     txt = "\n".join(txt)
     txt = txt + "\n## Solved Problems\n"
-    txt += fetch_problems()
+    txt += fetch_problems(base_dir=PROB_DIR)
     return txt
 
 
 def main():
     txt = get_readme()
+    print(txt)
     with open("README.md", mode="w") as f:
         f.write(txt)
 
 
 if __name__=="__main__":
-    txt = get_readme()
-    print(txt)
     main()
