@@ -14,7 +14,7 @@ jobs:
           pip install -r requirements.txt
           flake8 .
           pytest -s
-
+    steps:
       - uses: actions/checkout@v3
       - name: Update README.md
           git config --global user.email "1phanatasmas@korea.ac.kr"
